@@ -1,6 +1,9 @@
 # Ignore semua file
 *
 
+# Izinkan gitignore
+!.gitignore
+
 # Izinkan file utama
 !index.php
 !login.php
@@ -10,18 +13,10 @@
 !config/
 !config/**
 
-# Izinkan folder pengembalian
+# Izinkan folder pages dan SEMUA isinya
 !pages/
-!pages/pengembalian/
-!pages/pengembalian/**
+!pages/**
 
-# Izinkan folder layout
+# Izinkan folder layout dan SEMUA isinya
 !layout/
 !layout/**
-
-# Izinkan folder anggota
-!pages/anggota/
-!pages/anggota/**
-
-# Izinkan gitignore itu sendiri
-!.gitignore
