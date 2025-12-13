@@ -15,5 +15,13 @@
 !pages/pengembalian/
 !pages/pengembalian/**
 
+# Izinkan folder layout
+!layout/
+!layout/**
+
+# Izinkan folder anggota
+!pages/anggota/
+!pages/anggota/**
+
 # Izinkan gitignore itu sendiri
 !.gitignore
