@@ -1,3 +1,19 @@
-/layout
-/login.php
-/pages
+# Ignore semua file
+*
+
+# Izinkan file utama
+!index.php
+!login.php
+!logout.php
+
+# Izinkan folder config
+!config/
+!config/**
+
+# Izinkan folder pengembalian
+!pages/
+!pages/pengembalian/
+!pages/pengembalian/**
+
+# Izinkan gitignore itu sendiri
+!.gitignore
