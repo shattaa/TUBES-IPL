@@ -1,0 +1,82 @@
+/* =========================
+   BODY & CONTENT
+========================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+}
+
+.content {
+    margin-left: 230px; /* LEBAR SIDEBAR */
+    padding: 40px 20px;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* =========================
+   FORM GLOBAL
+========================= */
+label {
+    font-size: 14px;
+    color: #555;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* =========================
+   SEARCH BOX (STACKED RAPI)
+========================= */
+.search-box {
+    max-width: 420px;
+}
+
+
+.search-box input {
+    width: 100% !important;
+}
+
+.search-input-full {
+    height: 40px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Tombol Cari & Reset sebaris */
+.search-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.search-actions .btn {
+    flex: 1;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

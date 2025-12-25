@@ -1,0 +1,15 @@
+.info-denda {
+    background: #fff3cd;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    color: #856404;
+}
+
+button {
+    background: #28a745;
+    color: white;
+}
+button:hover {
+    background: #218838;
+}

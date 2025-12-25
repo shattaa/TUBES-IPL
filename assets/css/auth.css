@@ -1,0 +1,94 @@
+/* ===== GLOBAL ===== */
+body {
+    font-family: Arial, sans-serif;
+    background: #e9edf6;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ===== LOGIN BOX ===== */
+.login-box {
+    width: 350px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ===== TITLE ===== */
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* ===== FORM ===== */
+label {
+    font-size: 14px;
+    color: #444;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* ===== BUTTON ===== */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #005dc1;
+}
+
+/* ===== TOAST ===== */
+.toast {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #d1ecf1;
+    color: #0c5460;
+    border-left: 4px solid #17a2b8;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease, top 0.5s ease;
+    z-index: 999;
+}
+
+.toast.show {
+    opacity: 1;
+    top: 40px;
+    pointer-events: auto;
+}
+
+/* ===== ERROR ===== */
+.error {
+    margin-top: 10px;
+    background: #ffdddd;
+    padding: 10px;
+    border-left: 4px solid #c00;
+    color: #c00;
+    border-radius: 6px;
+    font-size: 14px;
+}

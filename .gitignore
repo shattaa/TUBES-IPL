@@ -20,3 +20,6 @@
 # Izinkan folder layout dan SEMUA isinya
 !layout/
 !layout/**
+
+!assets/
+!assets/**

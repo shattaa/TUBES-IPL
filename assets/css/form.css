@@ -1,0 +1,52 @@
+.form-box {
+    width: 420px;
+    margin: 80px auto;   /* INI YANG BIKIN TENGAH */
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #007bff;
+    color: white;
+}
+.btn-primary:hover { background: #005dc1; }
+
+.btn-warning {
+    background: #ffc107;
+    color: #000;
+}
+.btn-warning:hover { background: #e0a800; }
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.content {
+    margin-left: 230px;      /* sesuaikan dengan lebar sidebar */
+    padding: 40px 0;
+}
