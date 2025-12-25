@@ -53,43 +53,11 @@ if(isset($_POST['simpan'])) {
 <head>
 <meta charset="UTF-8">
 <title>Tambah Peminjaman Buku</title>
+<link rel="stylesheet" href="/TUBES_PERPUS/assets/css/global.css">
+<link rel="stylesheet" href="/TUBES_PERPUS/assets/css/form.css">
+<link rel="stylesheet" href="/TUBES_PERPUS/assets/css/peminjaman.css">
 
-<style>
-body{
-    font-family: Arial, sans-serif;
-    background:#f0f2f5;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-}
-.form-box{
-    width:450px;
-    background:#fff;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 6px 20px rgba(0,0,0,0.1);
-}
-label{font-size:14px;color:#555;}
-select,input{
-    width:100%;
-    padding:10px;
-    margin:5px 0 15px;
-    border-radius:8px;
-    border:1px solid #ccc;
-}
-button{
-    width:100%;
-    padding:12px;
-    background:#007bff;
-    border:none;
-    border-radius:8px;
-    color:#fff;
-    cursor:pointer;
-}
-button:hover{background:#005dc1;}
-.back-link{text-align:center;display:block;margin-top:15px;}
-</style>
+
 </head>
 
 <body>
@@ -144,7 +112,8 @@ button:hover{background:#005dc1;}
 <label>Tanggal Kembali</label>
 <input type="date" name="due" required>
 
-<button name="simpan">Simpan</button>
+<button class="btn-primary" name="simpan">Simpan</button>
+
 </form>
 
 <a href="index.php" class="back-link">← Kembali</a>

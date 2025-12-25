@@ -2,16 +2,24 @@
 require "../../config/database.php";
 
 if (isset($_POST['simpan'])) {
-    $kode = $_POST['kode'];
-    $judul = $_POST['judul'];
+    $kode    = $_POST['kode'];
+    $judul   = $_POST['judul'];
     $penulis = $_POST['penulis'];
-    $penerbit = $_POST['penerbit'];
-    $tahun = $_POST['tahun'];
-    $status = $_POST['status'];
+    $penerbit= $_POST['penerbit'];
+    $tahun   = $_POST['tahun'];
+    $stok    = $_POST['stok'];
 
-    mysqli_query($conn, "INSERT INTO daftar_buku (kode_buku, judul, penulis, penerbit, tahun_terbit, status) 
-    VALUES ('$kode', '$judul', '$penulis', '$penerbit', '$tahun', '$status')");
-    
+    // status otomatis berdasarkan stok
+    $status = ($stok > 0) ? 'Tersedia' : 'Habis';
+
+    // simpan ke database
+    mysqli_query($conn, "
+        INSERT INTO daftar_buku 
+        (kode_buku, judul, penulis, penerbit, tahun_terbit, stok, status) 
+        VALUES 
+        ('$kode', '$judul', '$penulis', '$penerbit', '$tahun', '$stok', '$status')
+    ");
+
     header("Location: index.php");
     exit;
 }
@@ -22,75 +30,8 @@ if (isset($_POST['simpan'])) {
 <head>
     <meta charset="UTF-8">
     <title>Tambah Buku</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f0f2f5;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .form-box {
-            width: 450px;
-            background: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 25px;
-            color: #333;
-        }
-
-        label {
-            font-size: 14px;
-            color: #555;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            font-size: 14px;
-        }
-
-        button {
-            width: 100%;
-            padding: 12px;
-            background: #007bff;
-            border: none;
-            border-radius: 8px;
-            color: white;
-            cursor: pointer;
-            font-size: 15px;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background: #005dc1;
-        }
-
-        .back-link {
-            display: block;
-            text-align: center;
-            margin-top: 15px;
-            color: #007bff;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="/TUBES_PERPUS/assets/css/global.css">
+    <link rel="stylesheet" href="/TUBES_PERPUS/assets/css/form.css">
 </head>
 <body>
 
@@ -111,15 +52,12 @@ if (isset($_POST['simpan'])) {
         <input type="text" name="penerbit" required>
 
         <label>Tahun Terbit:</label>
-        <input type="number" name="tahun" required>
+        <input type="number" name="tahun" min="1900" max="<?= date('Y'); ?>" required>
 
-        <label>Status:</label>
-        <select name="status">
-            <option value="Tersedia">Tersedia</option>
-            <option value="Dipinjam">Dipinjam</option>
-        </select>
+        <label>Stok Buku:</label>
+        <input type="number" name="stok" min="1" value="1" required>
 
-        <button name="simpan">Simpan</button>
+       <button class="btn-primary" name="simpan">Simpan</button>
     </form>
 
     <a href="index.php" class="back-link">⬅ Kembali</a>
